@@ -1,0 +1,50 @@
+﻿.services-container 
+{
+    min-height: 70vh;
+    padding: 10px;
+    color: #fff;
+}
+
+.services-header {
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services-card {
+    margin: 0 2rem;
+    line-height: 2;
+    width: 300px;
+}
+
+.services-img {
+    height: 300px;
+    min-width: 300px;
+    max-width: 100%;
+}
+
+.services-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.services-desc {
+    margin-bottom: 1rem;
+}
+
+.services-title {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+

@@ -1,6 +1,11 @@
-﻿body {
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+    color: white;
+    background-color:black;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -22,3 +27,147 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+span.field-validation-error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Bootstrap Overrides */
+.navbar-inverse {
+    background-color: #ff4342;
+    border-color: #ff4342;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+    font-size:20px;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: rgba(205, 40, 39, 0.55);
+}
+
+.navbar-inverse .navbar-nav > .dropdown > a .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+
+.dropdown-menu {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: rgb(71, 47, 106);
+    width: 160px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    font-size: 17px;
+    padding: 20px 15px;
+    height: 44px;
+
+    border-radius: 9px;
+}
+
+.form-control:focus {
+    border-color: #2196f3;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+label {
+    font-size: 18px;
+}
+
+
+
+/*Custom CSS*/
+html {
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.15;
+    background-color: black;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+    font-family: Poppins, Helvetica, Arial, sans-serif;
+}
+
+p {
+    font: 400 14px / 20px Poppins, Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: rgb(78, 159, 255);
+        text-decoration: none;
+    }
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 1228px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar-inverse {
+    background-color:black;
+}
+
+.navbar {
+    border: none;
+}
+    
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 0;
+}
+
+*::-webkit-scrollbar-track {
+     background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+     background-color: rgba(155, 155, 155, 0.7);
+     border-radius: 20px;
+     border: transparent;
+}   
