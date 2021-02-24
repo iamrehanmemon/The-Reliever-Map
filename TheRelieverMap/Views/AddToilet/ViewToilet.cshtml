@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TheRelieverMap.Models.AddToilet>
+@{
+    ViewBag.Title = "ViewToilet";
+}
+
+<h2>View Toilet</h2>
+<ul>
+    @foreach (var viewtoilet in Model)
+    {
+        <li>
+            <div class="toilet-name">
+                 <div>
+                    @viewtoilet.Name
+                 </div>
+            </div>
+            
+            <div class="toilet-type">
+                <div>
+                    @viewtoilet.Type.Name
+                </div>
+            </div>
+            <div class="state">
+                <div>
+                    @viewtoilet.State.Name
+                </div>
+            </div>
+            <div class="city">
+                <div>
+                    @viewtoilet.City
+                </div>
+            </div>
+            <div class="address">
+                <div>
+                    @viewtoilet.Address
+                </div>
+            </div>
+            <div class="compatible">
+                <div>
+                    @viewtoilet.Compatibility.Name
+                </div>
+            </div>
+            <br />
+        </li>
+    }
+</ul>

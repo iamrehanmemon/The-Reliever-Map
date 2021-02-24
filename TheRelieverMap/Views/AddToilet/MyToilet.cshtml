@@ -1,0 +1,78 @@
+﻿@model IEnumerable<TheRelieverMap.Models.AddToilet>
+@{
+    ViewBag.Title = "MyToilet";
+}
+
+<h2>MyToilets</h2>
+
+<ul>
+    @foreach (var toilet in Model)
+    {
+        <li>
+            <label>
+                <div class="toilet-name">
+                    <div>
+                        @toilet.Name
+                    </div>
+                </div>
+            </label>
+            <div class="toilet-type">
+                <div>
+                    @toilet.Type.Name
+                </div>
+            </div>
+            <div class="state">
+                <div>
+                    @toilet.State.Name
+                </div>
+            </div>
+            <div class="city">
+                <div>
+                    @toilet.City
+                </div>
+            </div>
+            <div class="address">
+                <div>
+                    @toilet.Address
+                </div>
+            </div>
+            <div class="compatible">
+                <div>
+                    @toilet.Compatibility.Name
+                </div>
+            </div>
+            <div>
+                <span><a href="@Url.Action("Edit", "AddToilet", new {id = toilet.Id})">Edit</a></span> |
+                <span><a href="#" class="js-cancel-toilet" data-toilet-id="@toilet.Id">Delete</a></span>
+            </div>
+            <br />
+
+        </li>
+    }
+</ul>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $(".js-cancel-toilet").click(function (e) {
+                var link = $(e.target);
+
+                if (confirm("Are you sure you want to delete this service?")) {
+                    $.ajax({
+                        url: "/api/deletetoilet/" + link.attr("data-toilet-id"),
+                        method: "DELETE"
+                    })
+                        .done(function () {
+                            link.parents("li").fadeOut(function () {
+                                $(this).remove();
+                            });
+                        })
+                        .fail(function () {
+                            alert("Something Failed");
+                        });
+                }
+            });
+        });
+    </script>
+}

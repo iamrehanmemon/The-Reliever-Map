@@ -20,6 +20,11 @@ namespace TheRelieverMap.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<AddToilet> AddToilets { get; set; }
+        public DbSet<State> States { get; set; }
+        public DbSet<ToiletType> ToiletTypes { get; set; }
+        public DbSet<Compatible> CompatibleFor { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
