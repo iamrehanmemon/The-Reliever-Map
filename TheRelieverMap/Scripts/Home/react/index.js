@@ -1,16 +1,22 @@
 ﻿import React from 'react';
 import { render } from 'react-dom';
-import Hero from "/Scripts/Home/react/components/hero/hero.component.js";
-import Services from "/Scripts/Home/react/components/services/services.component.js";
-import Feature from "/Scripts/Home/react/components/feature/feature.component.js";
+import { BrowserRouter, Route } from "react-router-dom";
+
+import HomePage from "../react/pages/homepage/homepage.component"
+import AddFormToilet from './components/addformtoilet/addformtoilet.component';
+import Navbar from './components/navbar/navbar.component';
 
 
 
 const App = () => (
     <React.Fragment>
-        <Hero />
-        <Services />
-        <Feature />
+        <BrowserRouter>
+            <Navbar/>
+            <Route path="/" exact>
+                <HomePage />
+            </Route>
+            <Route path="/AddToilet/Add" component={ AddFormToilet}/>
+        </BrowserRouter>
     </React.Fragment>
 );
 

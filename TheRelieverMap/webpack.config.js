@@ -10,6 +10,9 @@ module.exports = {
         path: path.resolve(__dirname, "./Scripts/dist/Home/react"),
         filename: "bundle.js"
     },
+    devServer: {
+        historyApiFallback: true,
+    },
     module: {
         rules: [
             {

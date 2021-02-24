@@ -210,13 +210,16 @@
     <Content Include="Scripts\Home\react\assets\icons\twitch.svg" />
     <Content Include="Scripts\Home\react\assets\icons\youtube.svg" />
     <Content Include="Scripts\Home\react\assets\images\running-dog.png" />
+    <Content Include="Scripts\Home\react\components\addformtoilet\addformtoilet.component.js" />
     <Content Include="Scripts\Home\react\components\feature\feature.component.js" />
     <Content Include="Scripts\Home\react\components\feature\feature.css" />
     <Content Include="Scripts\Home\react\components\hero\hero.component.js" />
     <Content Include="Scripts\Home\react\components\hero\hero.css" />
+    <Content Include="Scripts\Home\react\components\navbar\navbar.component.js" />
     <Content Include="Scripts\Home\react\components\services\services.component.js" />
     <Content Include="Scripts\Home\react\components\services\services.css" />
     <Content Include="Scripts\Home\react\index.js" />
+    <Content Include="Scripts\Home\react\pages\homepage\homepage.component.js" />
     <Content Include="webpack.config.js" />
     <Content Include=".babelrc" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -264,6 +267,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\AddToilet\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
