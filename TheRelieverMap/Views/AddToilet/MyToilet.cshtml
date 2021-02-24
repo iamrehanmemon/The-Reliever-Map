@@ -3,43 +3,34 @@
     ViewBag.Title = "MyToilet";
 }
 
-<h2>MyToilets</h2>
+<h2>My Facilities</h2>
 
 <ul>
     @foreach (var toilet in Model)
     {
         <li>
-            <label>
-                <div class="toilet-name">
-                    <div>
-                        @toilet.Name
-                    </div>
-                </div>
-            </label>
+            <div class="toilet-name">
+                @toilet.Name
+            </div>
+
             <div class="toilet-type">
-                <div>
-                    @toilet.Type.Name
-                </div>
+                @toilet.Type.Name
             </div>
+
             <div class="state">
-                <div>
-                    @toilet.State.Name
-                </div>
+                @toilet.State.Name
             </div>
+            
             <div class="city">
-                <div>
-                    @toilet.City
-                </div>
+                @toilet.City
             </div>
+
             <div class="address">
-                <div>
-                    @toilet.Address
-                </div>
+                @toilet.Address
             </div>
+
             <div class="compatible">
-                <div>
-                    @toilet.Compatibility.Name
-                </div>
+                @toilet.Compatibility.Name
             </div>
             <div>
                 <span><a href="@Url.Action("Edit", "AddToilet", new {id = toilet.Id})">Edit</a></span> |

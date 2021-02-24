@@ -10,6 +10,8 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.GetUserName() <span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li><a href="@Url.Action("Add", "AddToilet")">Add a Toilet</a></li>
+                <li><a href="@Url.Action("ViewToilet", "AddToilet")">View Toilets</a></li>
+                <li><a href="@Url.Action("MyToilet", "AddToilet")">My Facilities</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
             </ul>
