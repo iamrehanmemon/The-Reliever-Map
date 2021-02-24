@@ -96,6 +96,14 @@ label {
     font-size: 18px;
 }
 
+.table-hover > tbody > tr:hover {
+    background-color: grey;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: gray;
+}
+
 
 
 /*Custom CSS*/
@@ -171,3 +179,17 @@ img {
      border-radius: 20px;
      border: transparent;
 }   
+
+th {
+    font-size:  1.5rem;
+}
+.toilet-name {
+    font-size: 1.3rem;
+}
+
+.btn-del {
+    border: none;
+    border-radius: 24px;
+    color: white;
+    background: blue none repeat scroll 0% 0%;
+}

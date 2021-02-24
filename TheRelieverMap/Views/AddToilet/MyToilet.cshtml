@@ -5,7 +5,59 @@
 
 <h2>My Facilities</h2>
 
-<ul>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>State</th>
+            <th>Compatiable</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var toilet in Model)
+        {
+        <tr>
+            <td>
+                <div class="toilet-name">
+                    @toilet.Name
+                </div>
+
+                <div class="toilet-type">
+                    <p>Type: @toilet.Type.Name </p>
+                </div>
+
+                <div class="city">
+                    <p>City: @toilet.City </p>
+                </div>
+
+                <div class="address">
+                    <p>Address: @toilet.Address </p>
+                </div>
+            </td>
+            <td>
+                <div class="state">
+                    @toilet.State.Name
+                </div>
+            </td>
+            <td>
+                <div class="compatible">
+                    @toilet.Compatibility.Name
+                </div>
+            </td>
+            <td>
+                <span><a href="@Url.Action("Edit", "AddToilet", new {id = toilet.Id})">Edit</a></span>
+            </td>
+            <td>
+                <button class="btn-del js-cancel-toilet" data-toilet-id="@toilet.Id"><span class="btn-text">Delete</span></button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@*<ul>
     @foreach (var toilet in Model)
     {
         <li>
@@ -33,14 +85,14 @@
                 @toilet.Compatibility.Name
             </div>
             <div>
-                <span><a href="@Url.Action("Edit", "AddToilet", new {id = toilet.Id})">Edit</a></span> |
+                <span><a href="@Url.Action("Edit", "AddToilet", new {id = toilet.Id})">Edit</a></span> 
                 <span><a href="#" class="js-cancel-toilet" data-toilet-id="@toilet.Id">Delete</a></span>
             </div>
             <br />
 
         </li>
     }
-</ul>
+</ul>*@
 
 @section scripts
 {
@@ -55,7 +107,7 @@
                         method: "DELETE"
                     })
                         .done(function () {
-                            link.parents("li").fadeOut(function () {
+                            link.parents("tr").fadeOut(function () {
                                 $(this).remove();
                             });
                         })

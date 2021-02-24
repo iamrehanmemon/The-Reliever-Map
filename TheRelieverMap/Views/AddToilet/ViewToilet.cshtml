@@ -4,6 +4,51 @@
 }
 
 <h2>View Toilet</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>State</th>
+            <th>Compatiable</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var viewtoilet in Model)
+        {
+            <tr>
+                <td>
+                    <div class="toilet-name">
+                        @viewtoilet.Name
+                    </div>
+
+                    <div class="toilet-type">
+                        <p>Type: @viewtoilet.Type.Name </p>
+                    </div>
+
+                    <div class="city">
+                        <p>City: @viewtoilet.City </p>
+                    </div>
+
+                    <div class="address">
+                        <p>Address: @viewtoilet.Address </p>
+                    </div>
+                </td>
+                <td>
+                    <div class="state">
+                        @viewtoilet.State.Name
+                    </div>
+                </td>
+                <td>
+                    <div class="compatible">
+                        @viewtoilet.Compatibility.Name
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@*
 <ul>
     @foreach (var viewtoilet in Model)
     {
@@ -35,4 +80,4 @@
             <br />
         </li>
     }
-</ul>
+</ul>*@
